@@ -6,12 +6,12 @@ let turn = "X";
 let isgameover = false;
 let isMusicPlaying = false; // Track the music state
 
-// Function to change the turn
+// Gonna change the turn
 const changeTurn = () => {
     return turn === "X" ? "0" : "X";
 };
 
-// Function to check for a win
+// Gonna check for a win
 const checkWin = () => {
     let boxtext = document.getElementsByClassName('boxtext');
     let wins = [
@@ -37,7 +37,7 @@ const checkWin = () => {
     });
 };
 
-// Function to check for a tie
+// Gonna heck for a tie
 const checkTie = () => {
     let boxtext = document.getElementsByClassName('boxtext');
     let isTie = true;
@@ -54,7 +54,6 @@ const checkTie = () => {
     }
 };
 
-// Game Logic
 let boxes = document.getElementsByClassName("box");
 Array.from(boxes).forEach(element => {
     let boxtext = element.querySelector('.boxtext');
@@ -72,7 +71,6 @@ Array.from(boxes).forEach(element => {
     });
 });
 
-// Add onclick listener to reset button
 reset.addEventListener('click', () => {
     let boxtexts = document.querySelectorAll('.boxtext');
     Array.from(boxtexts).forEach(element => {
@@ -86,7 +84,7 @@ reset.addEventListener('click', () => {
     document.querySelector('.imgbox').getElementsByTagName('img')[1].style.width = "0px";
 });
 
-// Function to trigger confetti
+// Confetti part
 const launchConfetti = () => {
     var end = Date.now() + 2 * 1000;
 
@@ -110,7 +108,7 @@ const launchConfetti = () => {
     }());
 };
 
-// Function to toggle music
+// Music
 const toggleMusic = () => {
     if (isMusicPlaying) {
         music.pause();
