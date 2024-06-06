@@ -37,7 +37,7 @@ const checkWin = () => {
     });
 };
 
-// Gonna heck for a tie
+// Gonna check for a tie
 const checkTie = () => {
     let boxtext = document.getElementsByClassName('boxtext');
     let isTie = true;
