@@ -3,61 +3,95 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f8f3fa;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    line-height: 1.6;
 }
 
 nav {
-    background-color: rgb(37, 9, 37);
+    background-color: #250925;
     color: white;
     height: 65px;
     font-size: 27px;
     display: flex;
     align-items: center;
-    padding: 0 12px;
+    padding: 0 20px;
     font-family: 'Roboto', sans-serif;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
     list-style-type: none;
+    display: flex;
+    margin-left: auto;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #d1b3d1;
 }
 
 .gameContainer {
     display: flex;
     justify-content: center;
     margin-top: 50px;
+    padding: 0 20px;
 }
 
 .container {
     display: grid;
     grid-template-rows: repeat(3, 10vw);
     grid-template-columns: repeat(3, 10vw);
+    gap: 5px;
     font-family: 'Roboto', sans-serif;
     position: relative;
 }
 
 .box {
-    border: 2px solid black;
+    border: 2px solid #333;
     font-size: 8vw;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .box:hover {
-    background-color: rgb(242, 234, 250);
+    background-color: #f2eafa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .info {
     font-size: 22px;
+    margin-top: 20px;
+    text-align: center;
 }
 
 .gameInfo {
     padding: 0 34px;
     font-family: 'Baloo Bhaina 2', cursive;
+    text-align: center;
+    margin-top: 20px;
 }
 
 .gameInfo h1 {
     font-size: 2.5rem;
+    color: #911d91;
 }
 
 .imgbox img {
@@ -83,21 +117,27 @@ nav ul {
 
 #reset, #musicToggle {
     margin: 0 23px;
-    padding: 1px 18px;
+    padding: 8px 18px;
     background: #f3e7f9;
+    border: none;
     border-radius: 6px;
     cursor: pointer;
-    font-family: 'Baloo Bhaina 2';
+    font-family: 'Baloo Bhaina 2', cursive;
     font-size: 15px;
-    font-weight: bolder;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#reset:hover, #musicToggle:hover {
+    background-color: #e0c3ed;
+    transform: scale(1.05);
 }
 
 .line {
-    background-color: black;
+    background-color: #911d91;
     height: 3px;
     width: 0;
     position: absolute;
-    background-color: #911d91;
     transition: width 1s ease-in-out;
 }
 
